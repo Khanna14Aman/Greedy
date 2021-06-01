@@ -1,0 +1,48 @@
+// solution ======>https://codeforces.com/contest/1368/submission/118140257
+// question ======>https://codeforces.com/problemset/problem/1368/B
+// in this question k might be 10^16 
+// important question in terms of observation
+#include<iostream>
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+int a[10];
+bool check(int k)
+{
+   int s =1;
+    for(int i=0;i<10;i++)
+    {
+        s *= a[i];
+        if(s >= k)return true;
+    }
+    return false;
+}
+signed main()
+{
+    string s = "codeforces";
+    int i=-1;
+    int k;
+    cin>>k;
+    for(i=0;i<10;i++)
+    a[i]=1;
+    if(k>1)
+    {
+        while(1)
+        {
+            i++;
+            if(i>=10)i = 0;
+            a[i]++;
+            if(check(k))
+            break;
+        }
+    }
+    for(i=0;i<10;i++)
+    {
+        for(int j =0 ;j<a[i];j++)
+        {
+            cout<<s[i];
+        }
+    }
+    cout<<"\n";
+    return 0;
+}
