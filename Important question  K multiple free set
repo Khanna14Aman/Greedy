@@ -1,6 +1,7 @@
 // very important question I get to know where and how to use set and reduse time complexity of programs 
 // It is must to see all submissions of this question to know difference between all the submission.
 // question link ======> https://codeforces.com/contest/274/problem/A
+// submission link =======>  https://codeforces.com/contest/274/submission/118136267
 #include<iostream>
 #include<bits/stdc++.h>
 #define int long long
