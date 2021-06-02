@@ -1,6 +1,7 @@
 #include<iostream>
+#define int long long
 using namespace std;
-int main()
+signed main()
 {
     int t;
     cin>>t;
@@ -27,11 +28,17 @@ int main()
                 {
                     b[i][j]=3;
                 }
-                if(a[i][j] > b[i][j])
+                
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<m;j++)
+            {
+                if(a[i][j]>b[i][j])
                 {
-                    flag=1;
-                    //break;  if we use break here then it will break fort loop for all test case .means suppose in second case for loop goes break; then this for loop will not consider for test cases after this 
-                    //for loop only work for case 1 and 2 but after 2 it will not work because it will goes break;in second case
+                    flag =1;
+                    break;
                 }
             }
         }
